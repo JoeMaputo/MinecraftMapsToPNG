@@ -26,7 +26,7 @@ banners_script.src = "over/banners.js";
 //    {"x":2700,"z":-2470,"c":"cyan","title":"ancient city"},
 //];
 var v = new Viewer('map_viewer', -6208, -8256, -383, -424);
-for (let a = 0; a < 7; a++) {
+for (let a = 0; a < 9; a++) {
     for (let b = 0; b < 7; b++) {
         v.add_tile(new MapTile('over/' + a + '-' + b + '.png', a, b));
     }
