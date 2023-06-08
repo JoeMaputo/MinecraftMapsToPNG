@@ -20,6 +20,8 @@ define('OVERWORLD_MAPS', [
     284, 85,  80,  90,  136, 209, 204,
          250, 240, 255, 323,
     
+    372, 378, 383, 390, 395,
+    
     // 3 zoom
     74, 187, 182, 260,
     177, 197, 203, 208,
@@ -27,14 +29,14 @@ define('OVERWORLD_MAPS', [
     // 2 zoom
     186, 181, 233, 253, 259, 264,
     176, 196, 202, 207, 282,
-    300, 305, 311, 321,
+    300, 305, 311, 321, 393,
     
     // 1 zoom
     44, 48, 72, 
     185, 180, 252, 258, 263,
     107, 140, 175, 195, 206,
     271, 273, 278, 281, 286, 288,
-    299, 304, 310, 320,
+    299, 304, 310, 320, 397,
     
     // 0 zoom
     1, 7, 12, 18, 24, 64, 71, 76, 81, 96,
@@ -44,7 +46,7 @@ define('OVERWORLD_MAPS', [
     270, 272, 274, 275, 276, 277, 279, 280, 285, 287,
     230, 289, 290, 291, 292, 293, 295, 296, 297, 
     298, 303, 309, 314, 315, 319,
-    367,
+    367, 368, 374, 379, 386, 391,
 ]);
 define('END_MAPS', [
     // 4 zoom
@@ -73,7 +75,7 @@ $banners =  [];
 if ($end) {
     $banners = $converter->generate_tiles(END_MAPS, -2112, -4160, 3, 3);
 } else {
-    $banners = $converter->generate_tiles(OVERWORLD_MAPS, -6208, -8256, 7, 7);
+    $banners = $converter->generate_tiles(OVERWORLD_MAPS, -6208, -8256, 9, 7);
 }
 
 file_put_contents($output_dir . '/banners.js', 'const banners_list = ' . json_encode($banners, JSON_UNESCAPED_UNICODE | JSON_NUMERIC_CHECK));
