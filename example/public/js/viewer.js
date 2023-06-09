@@ -154,8 +154,27 @@ class Viewer
         this.context.fillStyle = minecraft_colors[color];
         this.context.fill();
         
+        this.draw_banner_text(title, ix, iy + 16);
+//        this.context.fillStyle = 'black';
+//        this.context.fillText(title, ix, iy + 16);
+    }
+    
+    draw_banner_text(text, ix, iy)
+    {
+//        this.context.globalAlpha = 0.7;
+        this.context.fillStyle = 'white';
+        this.context.fillText(text, ix - 1, iy - 1);
+        this.context.fillText(text, ix - 1, iy);
+        this.context.fillText(text, ix - 1, iy + 1);
+        this.context.fillText(text, ix, iy - 1);
+        this.context.fillText(text, ix, iy + 1);
+        this.context.fillText(text, ix + 1, iy - 1);
+        this.context.fillText(text, ix + 1, iy);
+        this.context.fillText(text, ix + 1, iy + 1);
+        
+//        this.context.globalAlpha = 1;
         this.context.fillStyle = 'black';
-        this.context.fillText(title, ix, iy + 16);
+        this.context.fillText(text, ix, iy);
     }
     
     clear()
