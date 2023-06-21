@@ -12,28 +12,21 @@ document.head.append(banners_script);
 
 
 banners_script.src = "over/banners.js";
-//const another_banners = [
-//    {"x":4875,"z":-1350,"c":"green","title":"jungle temple"},
-//    {"x":5465,"z":-890,"c":"green","title":"jungle temple"},
-//    {"x":5700,"z":-890,"c":"green","title":"jungle temple"},
-//    {"x":5690,"z":-2000,"c":"green","title":"jungle temple"},
-//    {"x":1930,"z":-660,"c":"cyan","title":"ancient city"},
-//    {"x":2520,"z":-600,"c":"cyan","title":"ancient city"},
-//    {"x":2420,"z":-2230,"c":"cyan","title":"ancient city"},
-//    {"x":2820,"z":-2200,"c":"cyan","title":"ancient city"},
-//    {"x":3160,"z":-2050,"c":"cyan","title":"ancient city"},
-//    {"x":2490,"z":-2550,"c":"cyan","title":"ancient city"},
-//    {"x":2700,"z":-2470,"c":"cyan","title":"ancient city"},
-//];
+const another_banners = [
+    {"x":-6120,"z":-4820,"c":"black","title":"Особняк"},
+    {"x":8340,"z":5880,"c":"black","title":"Особняк"},
+    {"x":13590,"z":5640,"c":"black","title":"Особняк"},
+    {"x":6710,"z":10790,"c":"black","title":"Особняк"},
+];
 var v = new Viewer('map_viewer', -6208, -8256, -383, -424);
 for (let a = 0; a < 9; a++) {
     for (let b = 0; b < 7; b++) {
         v.add_tile(new MapTile('over/' + a + '-' + b + '.png', a, b));
     }
 }
-//for (let ab of another_banners) {
-//    v.add_banner(ab);
-//}
+for (let ab of another_banners) {
+    v.add_banner(ab);
+}
 
 
 banners_script.onload = function () {
