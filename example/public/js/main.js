@@ -5,13 +5,12 @@ document.head.append(banners_script);
 //banners_script.src = "end/banners.js";
 //v = new Viewer('map_viewer', -2112, -4160, 0, 0);
 //for (let a = 0; a < 3; a++) {
-//    for (let b = 0; b < 3; b++) {
+//    for (let b = 0; b < 4; b++) {
 //        v.add_tile(new MapTile('end/' + a + '-' + b + '.png', a, b));
 //    }
 //}
 
 
-banners_script.src = "over/banners.js";
 const another_banners = [
     {"x":-6120,"z":-4820,"c":"black","title":"Особняк"},
     {"x":8340,"z":5880,"c":"black","title":"Особняк"},
@@ -54,7 +53,9 @@ const another_banners = [
     {"x":-425,"z":1335,"c":"cyan","title":""},
     {"x":345,"z":1270,"c":"cyan","title":""},
     {"x":-250,"z":1785,"c":"cyan","title":""},
+    {"x":13350,"z":-2160,"c":"red","title":"Восстановленный портал из ада"},
 ];
+banners_script.src = "over/banners.js";
 var v = new Viewer('map_viewer', -6208, -8256, -383, -424);
 for (let a = 0; a < 9; a++) {
     for (let b = 0; b < 7; b++) {
