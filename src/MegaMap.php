@@ -11,6 +11,8 @@ class MegaMap
     private const PNG_NAME_TEMPLATE = '/{x}-{z}.png';
 
     private const TILE_SIZE = 2048;
+    private const CENTER_X = -64;
+    private const CENTER_Z = -64;
 
     private $input_dir = '';
     private $output_dir = '';
@@ -30,8 +32,10 @@ class MegaMap
         $this->output_dir = rtrim($out, '/');
     }
     
-    public function generate_tiles(array $map_numbers, $x0, $z0, $x_tiles_count, $z_tiles_count)
+    public function generate_tiles(array $map_numbers, $x0_num, $z0_num, $x_tiles_count, $z_tiles_count)
     {
+        $x0 = self::CENTER_X + $x0_num * self::TILE_SIZE;
+        $z0 = self::CENTER_Z + $z0_num * self::TILE_SIZE;
         $this->read_maps($map_numbers);
         for ($i = 0; $i < $x_tiles_count; $i++) {
             $tile_x0 = $x0 + $i * self::TILE_SIZE;

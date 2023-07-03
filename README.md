@@ -7,9 +7,9 @@ Convert Minecraft map_XXX.dat files to PNG-tiles for web
 
 Использование:
 
-```php mega.php -i ../example/data -o ../example/public/over```
+```php mega.php -c ../example/over_maps.php```
 
-Имеется дополнительная опция для генерации карты Края:
+для генерации карты Края:
 
-```php mega.php --end -i ../example/data -o ../example/public/end```
+```php mega.php -c ../example/end_maps.php```
 
