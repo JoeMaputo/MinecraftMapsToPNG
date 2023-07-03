@@ -12,10 +12,9 @@ document.head.append(banners_script);
 
 
 const another_banners = [
-    {"x":-6120,"z":-4820,"c":"black","title":"Особняк"},
-    {"x":8340,"z":5880,"c":"black","title":"Особняк"},
-    {"x":13590,"z":5640,"c":"black","title":"Особняк"},
-    {"x":6710,"z":10790,"c":"black","title":"Особняк"},
+    {"x":8340,"z":5880,"c":"black","title":"Особняк1"},
+    {"x":13590,"z":5640,"c":"black","title":"Особняк2"},
+    {"x":6710,"z":10790,"c":"black","title":"Особняк3"},
     {"x":-1780,"z":-660,"c":"cyan","title":""},
     {"x":-1500,"z":-870,"c":"cyan","title":""},
     {"x":-2390,"z":-760,"c":"cyan","title":""},
