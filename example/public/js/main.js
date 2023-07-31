@@ -13,9 +13,7 @@ document.head.append(banners_script);
 
 const another_banners = [
     {"x":8340,"z":5880,"c":"black","title":"Особняк1"},
-    {"x":13590,"z":5640,"c":"black","title":"Особняк2"},
     {"x":6710,"z":10790,"c":"black","title":"Особняк3"},
-    {"x":-1780,"z":-660,"c":"cyan","title":""},
     {"x":-1500,"z":-870,"c":"cyan","title":""},
     {"x":-2390,"z":-760,"c":"cyan","title":""},
     {"x":-775,"z":-1015,"c":"cyan","title":""},
@@ -52,11 +50,10 @@ const another_banners = [
     {"x":-425,"z":1335,"c":"cyan","title":""},
     {"x":345,"z":1270,"c":"cyan","title":""},
     {"x":-250,"z":1785,"c":"cyan","title":""},
-    {"x":13350,"z":-2160,"c":"red","title":"Восстановленный портал из ада"},
 ];
 banners_script.src = "over/banners.js";
 var v = new Viewer('map_viewer', -6208, -8256, -383, -424);
-for (let a = 0; a < 9; a++) {
+for (let a = 0; a < 10; a++) {
     for (let b = 0; b < 7; b++) {
         v.add_tile(new MapTile('over/' + a + '-' + b + '.png', a, b));
     }
